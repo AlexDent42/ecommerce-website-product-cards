@@ -11,6 +11,8 @@
     --white-color:#fff;
     --light-background:#d4d3d3b0;
     --dark-font-color:#333;
+    --primary-icon-color:#ffd513;
+    --secondary-icon-color:#ccc;
 }
 
 body {
@@ -68,4 +70,26 @@ body {
     color: var(--dark-font-color);
     margin:5px 0;
 
+}
+
+.container .card .content .priceRating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .card .content .priceRating h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--dark-font-color);
+}
+
+.container .card .content .priceRating .fa-solid{
+    color: var(--primary-icon-color);
+    cursor: pointer;
+
+}
+
+.container .card .content .priceRating .fa-solid.grey {
+    color: var(--secondary-icon-color);
 }
