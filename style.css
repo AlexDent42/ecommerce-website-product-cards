@@ -1,10 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {
     --white-color:#fff;
+    --light-background:#d4d3d3b0;
+    --dark-font-color:#333;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--light-background);
+}
+
+.container {
+    position: relative;
+    width: 1200px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.container .card {
+    width: 100%;
+    background-color: var(--white-color);
+}
+
+
+.container .card .imgBx {
+    position: relative;
+    width: 100%;
+    height: 310px;
+    overflow: hidden;
+}
+
+.container .card .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    transform-origin: right;
+}
+
+.container .card:hover .imgBx img {
+    transform: scale(1.5);
+}
+
+.container .card .content {
+    padding: 10px;
+}
+
+.container .card .content .productName h3 {
+    font-size: 1.4em;
+    font-weight: 500;
+    color: var(--dark-font-color);
+    margin:5px 0;
+
+}
